@@ -1,0 +1,8 @@
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\bin\Debug\TestStuff.exe.config
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\bin\Debug\TestStuff.exe
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\bin\Debug\TestStuff.pdb
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\obj\Debug\TestStuff.csproj.AssemblyReference.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\obj\Debug\TestStuff.csproj.SuggestedBindingRedirects.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\obj\Debug\TestStuff.csproj.CoreCompileInputs.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\obj\Debug\TestStuff.exe
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\TestStuff\obj\Debug\TestStuff.pdb
