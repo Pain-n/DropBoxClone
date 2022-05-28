@@ -13,9 +13,10 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="FileListLable" Grid.Column="1" Content="Список файлов" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="27" Width="144"/>
         <Button x:Name="AddFileButton" Grid.Column="1" Content="Добавить" HorizontalAlignment="Left" Margin="537,37,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="AddFileButton_Click"/>
-        <Button x:Name="DownloadFileButton" Grid.Column="1" Content="Скачать" HorizontalAlignment="Left" Margin="537,217,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
-        <Button x:Name="DeleteFileButton" Grid.Column="1" Content="Удалить" HorizontalAlignment="Left" Margin="537,128,0,0" VerticalAlignment="Top" Height="50" Width="150"/>
-        <TextBox x:Name="TextBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="122"/>
+        <Button x:Name="DownloadFileButton" Grid.Column="1" Content="Скачать" HorizontalAlignment="Left" Margin="537,217,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="DownloadFileButton_Click"/>
+        <Button x:Name="DeleteFileButton" Grid.Column="1" Content="Удалить" HorizontalAlignment="Left" Margin="537,128,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="DeleteFileButton_Click"/>
+        <DataGrid x:Name="FileListDataGrid" Grid.Column="1" d:ItemsSource="{Binding }" Margin="10,37,311,32"/>
+        <TextBox x:Name="debug" Grid.Column="1" HorizontalAlignment="Left" Margin="537,310,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="80"/>
 
     </Grid>
 </Window>

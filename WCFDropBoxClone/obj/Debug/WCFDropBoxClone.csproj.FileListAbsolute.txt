@@ -1,10 +1,6 @@
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\WCFDropBoxClone.dll.config
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\WCFDropBoxClone.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\WCFDropBoxClone.pdb
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.csproj.AssemblyReference.cache
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.csproj.CoreCompileInputs.cache
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.dll
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.pdb
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\MySqlConnector.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\System.Buffers.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -19,4 +15,8 @@ D:\программирование\СтраданияЗаГрехиЧелове
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\System.Numerics.Vectors.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.csproj.AssemblyReference.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.csproj.CoreCompileInputs.cache
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.csproj.CopyComplete
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.dll
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\WCFDropBoxClone\obj\Debug\WCFDropBoxClone.pdb

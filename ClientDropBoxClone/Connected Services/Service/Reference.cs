@@ -9,35 +9,143 @@
 //------------------------------------------------------------------------------
 
 namespace ClientDropBoxClone.Service {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DownLoadFileData", Namespace="http://schemas.datacontract.org/2004/07/WCFDropBoxClone")]
+    [System.SerializableAttribute()]
+    public partial class DownLoadFileData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] dataField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName {
+            get {
+                return this.FileNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileNameField, value) != true)) {
+                    this.FileNameField = value;
+                    this.RaisePropertyChanged("FileName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] data {
+            get {
+                return this.dataField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.dataField, value) != true)) {
+                    this.dataField = value;
+                    this.RaisePropertyChanged("data");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DataTableToGrid", Namespace="http://schemas.datacontract.org/2004/07/WCFDropBoxClone")]
+    [System.SerializableAttribute()]
+    public partial class DataTableToGrid : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Data.DataTable FileTableField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Data.DataTable FileTable {
+            get {
+                return this.FileTableField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FileTableField, value) != true)) {
+                    this.FileTableField = value;
+                    this.RaisePropertyChanged("FileTable");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Service.IService")]
     public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddFile", ReplyAction="http://tempuri.org/IService/AddFileResponse")]
-        void AddFile();
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/AddFile")]
+        void AddFile(string filePath, byte[] FileData, float FileSize);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/AddFile", ReplyAction="http://tempuri.org/IService/AddFileResponse")]
-        System.Threading.Tasks.Task AddFileAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteFile", ReplyAction="http://tempuri.org/IService/DeleteFileResponse")]
-        void DeleteFile();
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/IService/AddFile")]
+        System.Threading.Tasks.Task AddFileAsync(string filePath, byte[] FileData, float FileSize);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteFile", ReplyAction="http://tempuri.org/IService/DeleteFileResponse")]
-        System.Threading.Tasks.Task DeleteFileAsync();
+        void DeleteFile(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteFile", ReplyAction="http://tempuri.org/IService/DeleteFileResponse")]
+        System.Threading.Tasks.Task DeleteFileAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DownloadFile", ReplyAction="http://tempuri.org/IService/DownloadFileResponse")]
-        void DownloadFile();
+        ClientDropBoxClone.Service.DownLoadFileData DownloadFile(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DownloadFile", ReplyAction="http://tempuri.org/IService/DownloadFileResponse")]
-        System.Threading.Tasks.Task DownloadFileAsync();
+        System.Threading.Tasks.Task<ClientDropBoxClone.Service.DownLoadFileData> DownloadFileAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DBConnect", ReplyAction="http://tempuri.org/IService/DBConnectResponse")]
-        void DBConnect();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/LoadDBToDataGrid", ReplyAction="http://tempuri.org/IService/LoadDBToDataGridResponse")]
+        ClientDropBoxClone.Service.DataTableToGrid LoadDBToDataGrid();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DBConnect", ReplyAction="http://tempuri.org/IService/DBConnectResponse")]
-        System.Threading.Tasks.Task DBConnectAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/LoadDBToDataGrid", ReplyAction="http://tempuri.org/IService/LoadDBToDataGridResponse")]
+        System.Threading.Tasks.Task<ClientDropBoxClone.Service.DataTableToGrid> LoadDBToDataGridAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -67,36 +175,36 @@ namespace ClientDropBoxClone.Service {
                 base(binding, remoteAddress) {
         }
         
-        public void AddFile() {
-            base.Channel.AddFile();
+        public void AddFile(string filePath, byte[] FileData, float FileSize) {
+            base.Channel.AddFile(filePath, FileData, FileSize);
         }
         
-        public System.Threading.Tasks.Task AddFileAsync() {
-            return base.Channel.AddFileAsync();
+        public System.Threading.Tasks.Task AddFileAsync(string filePath, byte[] FileData, float FileSize) {
+            return base.Channel.AddFileAsync(filePath, FileData, FileSize);
         }
         
-        public void DeleteFile() {
-            base.Channel.DeleteFile();
+        public void DeleteFile(int id) {
+            base.Channel.DeleteFile(id);
         }
         
-        public System.Threading.Tasks.Task DeleteFileAsync() {
-            return base.Channel.DeleteFileAsync();
+        public System.Threading.Tasks.Task DeleteFileAsync(int id) {
+            return base.Channel.DeleteFileAsync(id);
         }
         
-        public void DownloadFile() {
-            base.Channel.DownloadFile();
+        public ClientDropBoxClone.Service.DownLoadFileData DownloadFile(int id) {
+            return base.Channel.DownloadFile(id);
         }
         
-        public System.Threading.Tasks.Task DownloadFileAsync() {
-            return base.Channel.DownloadFileAsync();
+        public System.Threading.Tasks.Task<ClientDropBoxClone.Service.DownLoadFileData> DownloadFileAsync(int id) {
+            return base.Channel.DownloadFileAsync(id);
         }
         
-        public void DBConnect() {
-            base.Channel.DBConnect();
+        public ClientDropBoxClone.Service.DataTableToGrid LoadDBToDataGrid() {
+            return base.Channel.LoadDBToDataGrid();
         }
         
-        public System.Threading.Tasks.Task DBConnectAsync() {
-            return base.Channel.DBConnectAsync();
+        public System.Threading.Tasks.Task<ClientDropBoxClone.Service.DataTableToGrid> LoadDBToDataGridAsync() {
+            return base.Channel.LoadDBToDataGridAsync();
         }
     }
 }

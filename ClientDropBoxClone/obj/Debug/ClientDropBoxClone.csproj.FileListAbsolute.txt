@@ -29,3 +29,9 @@ D:\программирование\СтраданияЗаГрехиЧелове
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\obj\Debug\ClientDropBoxClone.csproj.CopyComplete
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\NLog.dll
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\NLog.xml
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\bin\Debug\NLog.config
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\ClientDropBoxClone\obj\Debug\ClientDropBoxClone_Content.g.cs

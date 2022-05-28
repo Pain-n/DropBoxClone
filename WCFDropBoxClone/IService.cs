@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Data;
 
 namespace WCFDropBoxClone
 {
@@ -11,13 +12,40 @@ namespace WCFDropBoxClone
     [ServiceContract]
     public interface IService
     {
+        [OperationContract (IsOneWay = true)]
+        void AddFile(string filePath, byte[] FileData,float FileSize);
         [OperationContract]
-        void AddFile();
+        void DeleteFile(int id);
         [OperationContract]
-        void DeleteFile();
+        DownLoadFileData DownloadFile(int id);
+
         [OperationContract]
-        void DownloadFile();
-        [OperationContract]
-        void DBConnect();
+        DataTableToGrid LoadDBToDataGrid();
+
+    }
+    [DataContract]
+    public class DataTableToGrid
+    {
+        [DataMember]
+        public DataTable FileTable
+        {
+            get;
+            set;
+        }
+    }
+    public class DownLoadFileData
+    {
+        [DataMember]
+        public byte[] data
+        {
+            get;
+            set;
+        }
+        [DataMember]
+        public string FileName
+        {
+            get;
+            set;
+        }
     }
 }

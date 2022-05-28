@@ -32,13 +32,13 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:8322/?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8322/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8322/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFDropBoxClone" />
+      <xsd:import schemaLocation="http://localhost:8322/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService_AddFile_InputMessage">
     <wsdl:part name="parameters" element="tns:AddFile" />
-  </wsdl:message>
-  <wsdl:message name="IService_AddFile_OutputMessage">
-    <wsdl:part name="parameters" element="tns:AddFileResponse" />
   </wsdl:message>
   <wsdl:message name="IService_DeleteFile_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteFile" />
@@ -52,16 +52,15 @@
   <wsdl:message name="IService_DownloadFile_OutputMessage">
     <wsdl:part name="parameters" element="tns:DownloadFileResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_DBConnect_InputMessage">
-    <wsdl:part name="parameters" element="tns:DBConnect" />
+  <wsdl:message name="IService_LoadDBToDataGrid_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDBToDataGrid" />
   </wsdl:message>
-  <wsdl:message name="IService_DBConnect_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DBConnectResponse" />
+  <wsdl:message name="IService_LoadDBToDataGrid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadDBToDataGridResponse" />
   </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="AddFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/AddFile" message="tns:IService_AddFile_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddFileResponse" message="tns:IService_AddFile_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="DeleteFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteFile" message="tns:IService_DeleteFile_InputMessage" />
@@ -71,9 +70,9 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/DownloadFile" message="tns:IService_DownloadFile_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/DownloadFileResponse" message="tns:IService_DownloadFile_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DBConnect">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/DBConnect" message="tns:IService_DBConnect_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/DBConnectResponse" message="tns:IService_DBConnect_OutputMessage" />
+    <wsdl:operation name="LoadDBToDataGrid">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/LoadDBToDataGrid" message="tns:IService_LoadDBToDataGrid_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoadDBToDataGridResponse" message="tns:IService_LoadDBToDataGrid_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="NetTcpBinding_IService" type="tns:IService">
@@ -84,9 +83,6 @@
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal" />
-      </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DeleteFile">
       <soap12:operation soapAction="http://tempuri.org/IService/DeleteFile" style="document" />
@@ -106,8 +102,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DBConnect">
-      <soap12:operation soapAction="http://tempuri.org/IService/DBConnect" style="document" />
+    <wsdl:operation name="LoadDBToDataGrid">
+      <soap12:operation soapAction="http://tempuri.org/IService/LoadDBToDataGrid" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -118,9 +114,9 @@
   </wsdl:binding>
   <wsdl:service name="Service">
     <wsdl:port name="NetTcpBinding_IService" binding="tns:NetTcpBinding_IService">
-      <soap12:address location="net.tcp://localhost:8302/" />
+      <soap12:address location="net.tcp://localhost:8303/" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost:8302/</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:8303/</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>PAIN\User</Upn>
         </Identity>

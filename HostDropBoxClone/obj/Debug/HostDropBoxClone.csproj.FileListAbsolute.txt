@@ -2,14 +2,6 @@ D:\программирование\СтраданияЗаГрехиЧелове
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\HostDropBoxClone.exe
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\HostDropBoxClone.pdb
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\WCFDropBoxClone.dll
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\WCFDropBoxClone.pdb
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\WCFDropBoxClone.dll.config
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.AssemblyReference.cache
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.SuggestedBindingRedirects.cache
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.CoreCompileInputs.cache
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.CopyComplete
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.exe
-D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.pdb
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\MySqlConnector.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Threading.Tasks.Extensions.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Memory.dll
@@ -17,6 +9,8 @@ D:\программирование\СтраданияЗаГрехиЧелове
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Buffers.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Numerics.Vectors.dll
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\WCFDropBoxClone.pdb
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\WCFDropBoxClone.dll.config
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\MySqlConnector.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Memory.xml
@@ -24,3 +18,9 @@ D:\программирование\СтраданияЗаГрехиЧелове
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Buffers.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Numerics.Vectors.xml
 D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.AssemblyReference.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.SuggestedBindingRedirects.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.CoreCompileInputs.cache
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.csproj.CopyComplete
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.exe
+D:\программирование\СтраданияЗаГрехиЧеловечества\DropBoxClone\HostDropBoxClone\obj\Debug\HostDropBoxClone.pdb

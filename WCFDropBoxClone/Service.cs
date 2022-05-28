@@ -15,50 +15,64 @@ namespace WCFDropBoxClone
     // ПРИМЕЧАНИЕ. Команду "Переименовать" в меню "Рефакторинг" можно использовать для одновременного изменения имени класса "Service" в коде и файле конфигурации.
     public class Service : IService
     {
-        //SqlConnection connect;
-        string connectStr = "server=localhost;uid=root;pwd=Act1@BefM;database=dropboxclonedb";
-        public void DBConnect()
+        string connectStr = "server=localhost;uid=root;pwd=Act1@BefM";
+
+        public void AddFile(string filePath, byte[] FileData, float FileSize)
         {
             MySqlConnection connect = new MySqlConnection(connectStr);
             connect.Open();
+            string fileName = filePath.Substring(filePath.LastIndexOf('\\') + 1);
+            string Query = "insert into dropboxclonedb.filestable(FileName,FileSize,FileBinary) values('" + fileName + "','" + FileSize + "','" + FileData + "');";
+            MySqlCommand command = new MySqlCommand(Query, connect);
+            command.ExecuteNonQuery();
+            connect.Close();
         }
-        public void AddFile()
+
+        public void DeleteFile(int id)
         {
             MySqlConnection connect = new MySqlConnection(connectStr);
-            MySqlCommand command = new MySqlCommand("select * from filestable", connect);
-            connect.Open();           
-            string filePath;
-            OpenFileDialog ofd = new OpenFileDialog();
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                filePath = ofd.FileName;
-                command.CommandText = @"INSERT INTO filestable VALUES (@FileName, @FileSize, @FileBinary)";
-                command.Parameters.Add("@FileName", MySqlDbType.VarChar, 50);
-                command.Parameters.Add("@FileSize", MySqlDbType.Float);
-                string fileName = filePath.Substring(filePath.LastIndexOf('\\') + 1);
-                float fileSize = new FileInfo(filePath).Length;
-                byte[] FileData;
-                using (FileStream fs = new FileStream(filePath, FileMode.Open))
-                {
-                    FileData = new byte[fs.Length];
-                    fs.Read(FileData, 0, FileData.Length);
-                    command.Parameters.Add("@FileBinary", MySqlDbType.VarBinary, Convert.ToInt32(fs.Length));
-                }
-                command.Parameters["@FileName"].Value = fileName;
-                command.Parameters["@FileSize"].Value = fileSize;
-                command.Parameters["@FileBinary"].Value = FileData;
-                command.ExecuteNonQuery();
-            }
+            connect.Open();
+            string Query = "delete from dropboxclonedb.filestable where id="+id;
+            MySqlCommand command = new MySqlCommand(Query, connect);
+            command.ExecuteNonQuery();
+            connect.Close();
         }
 
-        public void DeleteFile()
+        public DownLoadFileData DownloadFile(int id)
         {
-            throw new NotImplementedException();
+            DownLoadFileData FileData = new DownLoadFileData();
+            byte[] data;
+            string name;
+            MySqlConnection connect = new MySqlConnection(connectStr);
+            connect.Open();
+            string Query = "select id,FileName,FileSize,FileBinary from dropboxclonedb.filestable where id=" + id;
+            MySqlCommand command = new MySqlCommand(Query, connect);
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            float FileSize = (float)reader["FileSize"];
+            int FileSizeConv = (int)FileSize;
+            data = new byte[FileSizeConv];
+            reader.GetBytes(reader.GetOrdinal("FileBinary"), 0, data, 0, FileSizeConv);
+            //data = (byte[])reader["FileBinary"];
+            name = (string)reader["FileName"];
+            FileData.data = data;
+            FileData.FileName = name;
+            connect.Close();
+            return FileData;
         }
-
-        public void DownloadFile()
+        public DataTableToGrid LoadDBToDataGrid()
         {
-            throw new NotImplementedException();
+            DataTableToGrid fileTable = new DataTableToGrid();
+            DataTable dataTable = new DataTable("FileTable");
+            MySqlConnection connect = new MySqlConnection(connectStr);
+            connect.Open();
+            string Query = "select id,FileName,FileSize from dropboxclonedb.filestable";
+            MySqlCommand command = new MySqlCommand(Query, connect);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+            adapter.Fill(dataTable);
+            fileTable.FileTable = dataTable;
+            connect.Close();
+            return fileTable;
         }
     }
 }

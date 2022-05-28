@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostDropBoxClone", "HostDro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WCFDropBoxClone", "WCFDropBoxClone\WCFDropBoxClone.csproj", "{DA4566EF-0F54-4E36-AAB1-1FA950AE2750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestStuff", "TestStuff\TestStuff.csproj", "{F1E575B0-CFE2-4109-85FB-E40E260CCAA5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{D6D23800-FDF9-432B-BC3C-4F13B4A1C1EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{DA4566EF-0F54-4E36-AAB1-1FA950AE2750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA4566EF-0F54-4E36-AAB1-1FA950AE2750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA4566EF-0F54-4E36-AAB1-1FA950AE2750}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1E575B0-CFE2-4109-85FB-E40E260CCAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1E575B0-CFE2-4109-85FB-E40E260CCAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1E575B0-CFE2-4109-85FB-E40E260CCAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1E575B0-CFE2-4109-85FB-E40E260CCAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6D23800-FDF9-432B-BC3C-4F13B4A1C1EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D23800-FDF9-432B-BC3C-4F13B4A1C1EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D23800-FDF9-432B-BC3C-4F13B4A1C1EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D23800-FDF9-432B-BC3C-4F13B4A1C1EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
